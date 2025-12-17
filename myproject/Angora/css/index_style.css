@@ -1,0 +1,1889 @@
+html
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Make all images responsive by default */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure text doesn't overflow on small screens */
+body {
+    overflow-x: hidden;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .arr {
+        padding: 12px !important;
+    }
+}
+/* Navbar Base Styles */
+.mine {
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 20px 0;
+    box-shadow: none;
+    animation: fadeInDown 0.5s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navbar Scrolled State */
+.mine.scrolled {
+    background-color: rgba(31, 37, 40, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(242, 84, 84, 0.2);
+}
+
+nav ul li {
+    padding: 0px 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    color: #fff !important;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 8px 12px !important;
+    border-radius: 4px;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #f25454;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+nav ul li a:hover {
+    color: #f25454 !important;
+    background-color: rgba(242, 84, 84, 0.1);
+}
+
+/* Social icons styling */
+nav ul li .nav-link i {
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li .nav-link:hover i {
+    transform: scale(1.2);
+    color: #f25454 !important;
+}
+
+/* Social icons border styling */
+nav ul li .border-left {
+    border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.3s ease;
+}
+
+.mine.scrolled nav ul li .border-left {
+    border-left: 1px solid rgba(242, 84, 84, 0.3) !important;
+}
+
+nav ul li .border-left:hover {
+    border-left-color: #f25454 !important;
+}
+
+.logo-img {
+    width: 120px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+.mine.scrolled .logo-img {
+    width: 110px;
+}
+
+/* Navbar brand hover effect */
+.navbar-brand {
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar toggler styling */
+.navbar-toggler {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    padding: 4px 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    border-color: #f25454;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.mine.scrolled .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Active nav item styling */
+nav ul li.active > a {
+    color: #f25454 !important;
+}
+
+nav ul li.active > a::after {
+    width: 80%;
+}
+.f
+{
+    background-color: #1f2528;
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    z-index: 5;
+    top: 220px;
+}
+.slide
+{
+    height: 100vh;
+}
+.carousel-caption
+{
+    padding-bottom: 250px;
+}
+.carousel-caption h1
+{
+    font-size: 70px;
+}
+.arr{
+    border: 1px solid #fff;
+    border-radius: 5%;
+}
+.h-2
+{
+    height: 4px;
+}
+.about .header h2
+{
+    font-size: 75px;
+    opacity: 0.2;
+}
+.about .header h3
+{
+    font-size: 40px;
+    position: absolute;
+}
+
+.bline
+{
+    height: 1px;
+    background-color: black;
+    width: 80px;
+    margin: auto;
+    transition: 1s all;
+}
+.about .header:hover .bline
+{
+    width: 200px;
+}
+.about .header p
+{
+    font-size: 19px;
+}
+.about .para p ,h5
+{
+    font-size: 15px;
+    color: gray;
+}
+.about .para h5
+{
+    color: #000;
+    margin: 15px 0px;
+}
+.branding
+{
+    width: 0%;
+    animation-name: bar1;
+    animation-duration: 4s;
+}
+@keyframes bar1
+{
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
+.web
+{
+    width: 0%;
+    animation-name: bar2;
+    animation-duration: 4s;
+}
+@keyframes bar2
+{
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+.graphic
+{
+    width: 0%;
+    animation-name: bar3;
+    animation-duration: 4s;
+}
+@keyframes bar3
+{
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.develop
+{
+    width: 0%;
+    animation-name: bar4;
+    animation-duration: 4s;
+}
+@keyframes bar4
+{
+    0%{width: 0%;}
+    100%{width: 70%;}
+}
+.team .header h2
+{
+    font-size: 75px;
+    opacity: 0.2;
+}
+.team .header .sh
+{
+    justify-content: center;
+    align-items: center;
+}
+.team .header h3
+{
+    font-size: 40px;
+    position: absolute;
+}
+.team .header:hover .bline
+{
+    width: 200px;
+}
+.image{
+    position: relative;
+    color: #fff;
+}
+.layout
+{
+    position: absolute;
+    top: 0px;
+    background-color: rgba(242, 84, 84, 0.82);
+    align-items: center;
+    justify-content: center;
+}
+.image i
+{
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 20px;
+}
+.team .astc .layout
+{
+    transition: 1s all;
+    opacity: 0;
+}
+.team .astc:hover .layout
+{
+    opacity: 1;
+}
+.team .astc img
+{
+    transition: 1s all;
+}
+.team .astc:hover img
+{
+    
+    transform: scale(1.1,1.1);
+}
+.team .astc h5
+{
+    color: #000;
+    font-weight: 550;
+}
+.team .astc:hover h5
+{
+    color: rgb(242, 84, 84);
+}
+.rose
+{
+    background-color: rgb(242, 84, 84);
+    color: #fff;
+    font-size: 20px;
+}
+.rose:hover
+{
+    background-color: rgba(242, 84, 84,0.8);
+    color: #fff;
+}
+.team h3
+{
+    font-size: 34px;
+}
+.services
+{
+    background-color: #fafafa
+}
+.services .header h2
+{
+    font-size: 75px;
+    opacity: 0.2;
+}
+.services .header .sh
+{
+    justify-content: center;
+    align-items: center;
+}
+.services .header h3
+{
+    font-size: 40px;
+    position: absolute;
+}
+.services .header:hover .bline
+{
+    width: 200px;
+}
+.services i
+{
+    color: rgb(242, 84, 84);
+    font-size: 20px;
+    padding: 8px 0px 0px;
+    margin: 0px;
+}
+.services span
+{
+    font-size: 23px;
+}
+.services .content:hover span
+{
+    color: rgb(242, 84, 84);
+}
+
+.services .asci
+{
+    padding: 0px;
+    margin: 0px;
+}
+.services .container
+{
+    width: 90%;
+}
+
+.review .client .content
+{
+ 
+    border: 1px solid transparent;
+    border-radius: 50%;overflow: hidden;
+}
+.containerh {
+    width: 70%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.containerh .image {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 120px;
+    margin: 0 auto;
+}
+
+.review h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+.review p {
+    font-size: 15px;
+    color: gray;
+}
+
+.review .header h2 {
+    font-size: 75px;
+    opacity: 0.2;
+}
+
+.review .header h3 {
+    font-size: 40px;
+    position: absolute;
+}
+
+.review .header:hover .bline {
+    width: 200px;
+}
+
+.review .after {
+    font-size: 28px;
+    margin: 15px 0px;
+    line-height: 1.6;
+}
+
+.review .content {
+    padding: 10px;
+}
+
+.review .content .image {
+    margin-bottom: 15px;
+}
+
+.review .content img {
+    max-width: 100%;
+    height: auto;
+}
+
+.review #carouselExampleControls {
+    overflow: hidden;
+    min-height: auto;
+}
+
+.review #carouselExampleControls.h-25 {
+    height: auto !important;
+}
+
+.review .carousel-control-prev,
+.review .carousel-control-next {
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+.review .carousel-control-prev:hover,
+.review .carousel-control-next:hover {
+    background-color: rgba(242, 84, 84, 0.7);
+}
+
+/* Review Section Spacing */
+.review {
+    padding-bottom: 60px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.review .carousel {
+    margin-bottom: 40px;
+}
+
+.review #carouselExampleControls {
+    margin-bottom: 30px;
+}
+
+.review .container {
+    padding-bottom: 20px;
+}
+/* Get In Touch Section */
+.touch {
+    margin: 200px 0px 50px 0px;
+    background-color: #fafafa;
+    padding: 60px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.touch .header h2 {
+    font-size: 75px;
+    opacity: 0.2;
+}
+
+.touch .header h3 {
+    font-size: 40px;
+    position: absolute;
+}
+
+.touch .header:hover .bline {
+    width: 200px;
+}
+
+.touch .content {
+    margin-top: 40px;
+    padding-top: 40px;
+}
+
+.touch .content h3 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.touch .content .icon {
+    transition: all 0.3s ease;
+}
+
+.touch .content .icon:hover {
+    background-color: rgba(242, 84, 84, 0.05);
+    border-radius: 5px;
+}
+
+.touch .content i {
+    font-size: 28px;
+    color: #f25454;
+    transition: all 0.3s ease;
+}
+
+.touch .content .icon:hover i {
+    transform: scale(1.1);
+}
+
+.touch .content .icon span {
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.touch .content .icon:hover span {
+    color: #f25454;
+}
+
+.touch .content input,
+.touch .content textarea {
+    border: 1px solid #f25454;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.touch .content input:focus,
+.touch .content textarea:focus {
+    outline: none;
+    border-color: #f25454;
+    box-shadow: 0 0 0 0.2rem rgba(242, 84, 84, 0.25);
+}
+
+.touch .content textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Icon layout improvements */
+.touch .content .icon .col-2,
+.touch .content .icon .col-md-1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 5px;
+}
+
+.touch .content .icon .col-10,
+.touch .content .icon .col-md-11 {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn1 {
+    background-color: #f25454;
+    color: #fff;
+    transition: all 0.3s ease;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.btn1:hover {
+    background-color: rgba(242, 84, 84, 0.8);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(242, 84, 84, 0.3);
+}
+
+.btn1 i {
+    color: #fff;
+}
+/* Footer Styles */
+footer {
+    background-image: url(../images/dotted-map.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #222;
+    padding: 60px 0;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+footer > * {
+    position: relative;
+    z-index: 1;
+}
+
+footer .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+footer .row > [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+footer img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+    width: 80px;
+    transition: all 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+footer .content {
+    line-height: 1.8;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+footer .content .container {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+footer .content .row {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+footer .content .row.no-gutters {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+footer .content1 {
+    margin-bottom: 30px;
+}
+
+footer .content1 h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(242, 84, 84, 0.3);
+    display: inline-block;
+    width: 100%;
+}
+
+footer .content1 p {
+    font-weight: 600;
+    color: #999;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+footer .content1 p:hover {
+    color: #f25454;
+    padding-left: 5px;
+}
+
+/* Footer Buttons */
+.btn2 {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.btn2:hover {
+    color: #f25454;
+    border: 1px solid #f25454;
+    background-color: rgba(242, 84, 84, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Footer Icons Section */
+.footericons {
+    background-color: #1a1a1a;
+    padding: 25px 0;
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.footericons .container {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footericons .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.footericons .row > [class*="col-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footericons a {
+    margin: 0px 10px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footericons a:hover {
+    color: #f25454;
+    transform: translateY(-3px) scale(1.1);
+}
+
+.footericons .clean {
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footericons .clean:hover {
+    color: #f25454 !important;
+}
+.per
+{
+    top: 0px;
+    right: 0px;
+    opacity: 1;
+    animation-name: move;
+    animation-duration: 8s;
+}
+.perc
+{
+    bottom: 10px;
+    right: 0px;
+    opacity: 1;
+    animation-name: move;
+    animation-duration: 8s;
+    
+}
+@keyframes move
+{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   ============================================ */
+
+/* Large Desktops (max-width: 1200px) */
+@media (max-width: 1200px) {
+    .containerh {
+        width: 85%;
+    }
+    
+    .services .container {
+        width: 95%;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 60px;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 200px;
+    }
+}
+
+/* Tablets and Medium Devices (max-width: 992px) */
+@media (max-width: 992px) {
+    .carousel-caption h1 {
+        font-size: 50px;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 150px;
+    }
+    
+    .about .header h2,
+    .team .header h2,
+    .services .header h2,
+    .review .header h2,
+    .touch .header h2 {
+        font-size: 60px;
+    }
+    
+    .about .header h3,
+    .team .header h3,
+    .services .header h3,
+    .review .header h3,
+    .touch .header h3 {
+        font-size: 32px;
+    }
+    
+    .team h3 {
+        font-size: 28px;
+    }
+    
+    .touch {
+        margin: 100px 0px 50px 0px;
+        padding: 50px 0;
+    }
+    
+    .touch .content {
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+    
+    .touch .content h3 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    
+    .touch .content .icon {
+        margin-bottom: 20px;
+    }
+    
+    .touch .content i {
+        font-size: 24px;
+    }
+    
+    .touch .content .icon span {
+        font-size: 18px;
+    }
+    
+    .touch .content input,
+    .touch .content textarea {
+        font-size: 15px;
+        padding: 12px;
+    }
+    
+    .btn1 {
+        font-size: 15px;
+        padding: 12px 24px;
+    }
+    
+    .containerh {
+        width: 90%;
+        padding: 0 15px;
+    }
+    
+    .review .after {
+        font-size: 24px;
+        padding: 20px 15px;
+    }
+    
+    .review .content .image {
+        max-width: 100px;
+    }
+    
+    .review .content {
+        padding: 15px 5px;
+    }
+    
+    .review .carousel-control-prev,
+    .review .carousel-control-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .team .astc {
+        margin-bottom: 30px;
+    }
+    
+    .services .content {
+        margin-bottom: 30px;
+    }
+    
+    .about .para {
+        margin-bottom: 30px;
+    }
+    
+    /* Footer responsive for tablets */
+    footer {
+        padding: 50px 0;
+    }
+    
+    footer .content1 {
+        margin-bottom: 30px;
+    }
+    
+    footer .content1 h3 {
+        font-size: 19px;
+    }
+    
+    footer .content1 p {
+        font-size: 14px;
+    }
+    
+    /* Popular Tags responsive for tablets */
+    footer .row.no-gutters {
+        margin: 0 -5px;
+    }
+    
+    footer .row.no-gutters > [class*="col-"] {
+        padding: 0 5px;
+    }
+    
+    .btn2 {
+        font-size: 11px;
+        padding: 6px 12px;
+        white-space: nowrap;
+        min-height: 32px;
+    }
+    
+    footer .col-sm-4 .btn2 {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+    
+    footer .col-sm-8 .btn2 {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+    
+    footer .col-md-3 h3 {
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet-specific styles for Popular Tags (768px - 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+    footer .row.no-gutters {
+        margin: 0 -6px;
+    }
+    
+    footer .row.no-gutters > [class*="col-"] {
+        padding: 0 6px;
+    }
+    
+    footer .col-sm-4 .btn2 {
+        font-size: 11px;
+        padding: 7px 12px;
+        min-height: 34px;
+    }
+    
+    footer .col-sm-8 .btn2 {
+        font-size: 11px;
+        padding: 7px 14px;
+        min-height: 34px;
+    }
+    
+    footer .col-md-3 h3 {
+        margin-bottom: 18px;
+    }
+}
+
+/* Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 40px;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 100px;
+    }
+    
+    .about .header h2,
+    .team .header h2,
+    .services .header h2,
+    .review .header h2,
+    .touch .header h2 {
+        font-size: 50px;
+    }
+    
+    .about .header h3,
+    .team .header h3,
+    .services .header h3,
+    .review .header h3,
+    .touch .header h3 {
+        font-size: 28px;
+    }
+    
+    .about .header p,
+    .team .header p,
+    .services .header p,
+    .review .header p,
+    .touch .header p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+    
+    .about .para p {
+        font-size: 14px;
+    }
+    
+    .team h3 {
+        font-size: 24px;
+    }
+    
+    .review {
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+    
+    .touch {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        padding: 40px 0;
+    }
+    
+    .touch .content {
+        margin-top: 25px;
+        padding-top: 25px;
+    }
+    
+    .touch .content h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .touch .content .icon {
+        margin-bottom: 20px;
+        padding: 15px 0;
+    }
+    
+    .touch .content i {
+        font-size: 22px;
+    }
+    
+    .touch .content .icon span {
+        font-size: 16px;
+    }
+    
+    .touch .content input,
+    .touch .content textarea {
+        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .touch .content textarea {
+        min-height: 120px;
+    }
+    
+    .btn1 {
+        padding: 12px 24px;
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .review .after {
+        font-size: 20px;
+        padding: 15px 10px;
+        margin: 15px 0;
+    }
+    
+    .containerh {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .review .content .image {
+        max-width: 80px;
+        margin-bottom: 10px;
+    }
+    
+    .review .content {
+        padding: 10px 5px;
+    }
+    
+    .review h3 {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+    
+    .review p {
+        font-size: 13px;
+    }
+    
+    .review .carousel-control-prev,
+    .review .carousel-control-next {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .review .row {
+        margin: 0 -5px;
+    }
+    
+    .review .row > [class*="col-"] {
+        padding: 0 5px;
+    }
+    
+    .f {
+        top: 150px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .slide {
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .services span {
+        font-size: 20px;
+    }
+    
+    .services i {
+        font-size: 18px;
+    }
+    
+    .rose {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    
+    .team .row.pt-5 {
+        text-align: center;
+    }
+    
+    .team .row.pt-5 .col-md-5,
+    .team .row.pt-5 .col-md-2 {
+        margin-bottom: 20px;
+    }
+    
+    .team .row.pt-5 .col-md-2 {
+        margin-left: 0 !important;
+    }
+    
+    footer {
+        padding: 40px 0;
+        overflow-x: hidden;
+    }
+    
+    footer .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    footer .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    
+    footer .row > [class*="col-"] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    footer img {
+        width: 60px;
+        margin-bottom: 25px;
+    }
+    
+    footer .content1 {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+    
+    footer .content1 h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    footer .content1 p {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+    
+    /* Popular Tags responsive for small tablets */
+    footer .row.no-gutters {
+        margin: 0 -3px;
+    }
+    
+    footer .row.no-gutters > [class*="col-"] {
+        padding: 0 3px;
+    }
+    
+    .btn2 {
+        font-size: 11px;
+        padding: 5px 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    footer .col-sm-4 .btn2 {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+    
+    footer .col-sm-8 .btn2 {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    
+    .footericons {
+        padding: 20px 0;
+    }
+    
+    .footericons .row {
+        text-align: center;
+    }
+    
+    .footericons .col-md-3,
+    .footericons .col-md-6 {
+        margin-bottom: 15px;
+    }
+    
+    .footericons a {
+        margin: 0px 8px;
+        font-size: 16px;
+    }
+    
+    .footericons .clean {
+        font-size: 14px;
+    }
+}
+
+/* Mobile Devices (max-width: 576px) */
+@media (max-width: 576px) {
+    .carousel-caption h1 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .about .header h2,
+    .team .header h2,
+    .services .header h2,
+    .review .header h2,
+    .touch .header h2 {
+        font-size: 40px;
+    }
+    
+    .about .header h3,
+    .team .header h3,
+    .services .header h3,
+    .review .header h3,
+    .touch .header h3 {
+        font-size: 24px;
+    }
+    
+    .about .header p,
+    .team .header p,
+    .services .header p,
+    .review .header p,
+    .touch .header p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+    
+    .about .para p {
+        font-size: 13px;
+    }
+    
+    .about .para h5 {
+        font-size: 14px;
+    }
+    
+    .team h3 {
+        font-size: 20px;
+    }
+    
+    .review {
+        padding-bottom: 50px;
+        margin-bottom: 0;
+    }
+    
+    .review .carousel {
+        margin-bottom: 30px;
+    }
+    
+    .review #carouselExampleControls {
+        margin-bottom: 25px;
+    }
+    
+    .touch {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        padding: 35px 0;
+    }
+    
+    .touch .content {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    .touch .content h3 {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .touch .content .icon {
+        margin-bottom: 15px;
+        padding: 15px 0;
+        text-align: left;
+    }
+    
+    .touch .content i {
+        font-size: 20px;
+    }
+    
+    .touch .content .icon span {
+        font-size: 15px;
+    }
+    
+    .touch .content input,
+    .touch .content textarea {
+        font-size: 14px;
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+    
+    .touch .content textarea {
+        min-height: 120px;
+    }
+    
+    .btn1 {
+        padding: 12px 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+    
+    .review .after {
+        font-size: 16px;
+        padding: 15px 10px;
+        margin: 15px 0;
+        line-height: 1.5;
+    }
+    
+    .containerh {
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .review .content .image {
+        max-width: 70px;
+        margin-bottom: 8px;
+    }
+    
+    .review .content {
+        padding: 8px 3px;
+    }
+    
+    .review h3 {
+        font-size: 13px;
+        margin: 5px 0;
+    }
+    
+    .review p {
+        font-size: 12px;
+    }
+    
+    .review .carousel-control-prev,
+    .review .carousel-control-next {
+        width: 30px;
+        height: 30px;
+        opacity: 0.7;
+    }
+    
+    .review .row {
+        margin: 0 -3px;
+    }
+    
+    .review .row > [class*="col-"] {
+        padding: 0 3px;
+    }
+    
+    .review #carouselExampleControls {
+        margin-bottom: 20px;
+    }
+    
+    .f {
+        top: 100px;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .slide {
+        min-height: 70vh;
+    }
+    
+    .services span {
+        font-size: 18px;
+    }
+    
+    .services i {
+        font-size: 16px;
+    }
+    
+    .services .content {
+        margin-bottom: 25px;
+    }
+    
+    .services .asci {
+        padding-left: 10px;
+    }
+    
+    .rose {
+        font-size: 16px;
+        padding: 8px 16px;
+        width: 100%;
+    }
+    
+    .bline {
+        width: 60px;
+    }
+    
+    .about .header:hover .bline,
+    .team .header:hover .bline,
+    .services .header:hover .bline,
+    .review .header:hover .bline,
+    .touch .header:hover .bline {
+        width: 120px;
+    }
+    
+    .touch {
+        margin: 50px 0px 30px 0px;
+    }
+    
+    .touch .content {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+    
+    .touch .content input,
+    .touch .content textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    nav ul li {
+        padding: 5px 0;
+    }
+    
+    nav ul li a {
+        padding: 10px 15px !important;
+        display: block;
+    }
+    
+    nav ul li a::after {
+        display: none;
+    }
+    
+    nav ul li a:hover {
+        background-color: rgba(242, 84, 84, 0.15);
+        padding-left: 20px !important;
+    }
+    
+    .navbar-brand .logo-img {
+        width: 100px;
+        height: auto;
+    }
+    
+    .mine {
+        padding: 12px 0;
+    }
+    
+    .mine.scrolled {
+        padding: 8px 0;
+    }
+    
+    .mine.scrolled .logo-img {
+        width: 95px;
+    }
+    
+    .review .client .content {
+        margin-bottom: 15px;
+    }
+    
+    .review .row .col-md-2 {
+        margin-bottom: 20px;
+    }
+    
+    footer {
+        padding: 35px 0;
+        overflow-x: hidden;
+    }
+    
+    footer .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    footer .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    footer .row > [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    footer img {
+        width: 50px;
+        margin-bottom: 20px;
+    }
+    
+    footer .content1 {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
+    footer .content1 h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    
+    footer .content1 p {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    
+    .btn2 {
+        font-size: 11px;
+        padding: 4px 8px;
+        margin: 2px 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .footericons {
+        padding: 18px 0;
+    }
+    
+    .footericons a {
+        margin: 0px 6px;
+        font-size: 16px;
+    }
+    
+    .footericons .clean {
+        font-size: 13px;
+    }
+    
+    .footericons .row {
+        flex-direction: column;
+    }
+    
+    .footericons .col-md-6 {
+        margin-bottom: 15px;
+    }
+    
+    .image i {
+        margin: 5px;
+        font-size: 16px;
+    }
+    
+    .team .astc {
+        margin-bottom: 25px;
+    }
+    
+    .about .para {
+        margin-bottom: 25px;
+    }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .carousel-caption h1 {
+        font-size: 24px;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 30px;
+    }
+    
+    .about .header h2,
+    .team .header h2,
+    .services .header h2,
+    .review .header h2,
+    .touch .header h2 {
+        font-size: 35px;
+    }
+    
+    .about .header h3,
+    .team .header h3,
+    .services .header h3,
+    .review .header h3,
+    .touch .header h3 {
+        font-size: 20px;
+    }
+    
+    .about .header p,
+    .team .header p,
+    .services .header p,
+    .review .header p,
+    .touch .header p {
+        font-size: 13px;
+    }
+    
+    .services span {
+        font-size: 16px;
+    }
+    
+    .review {
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+    
+    .review .carousel {
+        margin-bottom: 25px;
+    }
+    
+    .review #carouselExampleControls {
+        margin-bottom: 20px;
+    }
+    
+    .touch {
+        margin-top: 40px;
+        margin-bottom: 25px;
+        padding: 30px 0;
+    }
+    
+    .touch .content {
+        margin-top: 15px;
+        padding-top: 15px;
+    }
+    
+    .touch .content h3 {
+        font-size: 16px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    
+    .touch .content .icon {
+        margin-bottom: 12px;
+        padding: 12px 0;
+    }
+    
+    .touch .content i {
+        font-size: 18px;
+    }
+    
+    .touch .content .icon span {
+        font-size: 14px;
+    }
+    
+    .touch .content input,
+    .touch .content textarea {
+        font-size: 13px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+    
+    .touch .content textarea {
+        min-height: 100px;
+    }
+    
+    .btn1 {
+        padding: 10px 18px;
+        font-size: 13px;
+        width: 100%;
+    }
+    
+    .review .after {
+        font-size: 14px;
+        padding: 12px 8px;
+        margin: 12px 0;
+        line-height: 1.4;
+    }
+    
+    .review .content .image {
+        max-width: 60px;
+    }
+    
+    .review h3 {
+        font-size: 12px;
+    }
+    
+    .review p {
+        font-size: 11px;
+    }
+    
+    .review .carousel-control-prev,
+    .review .carousel-control-next {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .f {
+        display: none;
+    }
+    
+    .arr {
+        padding: 8px !important;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .navbar-brand .logo-img {
+        width: 80px;
+    }
+    
+    .mine.scrolled .logo-img {
+        width: 75px;
+    }
+    
+    nav ul li .nav-link i {
+        font-size: 20px;
+    }
+    
+    footer {
+        padding: 30px 0;
+        overflow-x: hidden;
+    }
+    
+    footer .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    footer img {
+        width: 40px;
+        margin-bottom: 15px;
+    }
+    
+    footer .content1 {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    
+    footer .content1 h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+    }
+    
+    footer .content1 p {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    footer .row.no-gutters {
+        margin: 0;
+    }
+    
+    footer .row.no-gutters > [class*="col-"] {
+        padding: 0 3px;
+    }
+    
+    footer .row {
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    
+    footer .row > [class*="col-"] {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .btn2 {
+        font-size: 10px;
+        padding: 4px 6px;
+        margin: 2px 0;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .footericons .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .footericons .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .footericons .row > [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .footericons {
+        padding: 15px 0;
+    }
+    
+    .footericons a {
+        margin: 0px 5px;
+        font-size: 14px;
+    }
+    
+    .footericons .clean {
+        font-size: 12px;
+    }
+}
+
+/* Landscape Orientation for Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .slide {
+        min-height: 100vh;
+    }
+    
+    .carousel-caption {
+        padding-bottom: 80px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 35px;
+    }
+}

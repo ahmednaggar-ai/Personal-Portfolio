@@ -1,0 +1,535 @@
+header
+{
+    background-image: url('../img/header-bg.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    color: #FFF;
+}
+.header-content h1{
+    font-size: 4rem;
+    margin: 25px 0px;
+    font-weight: 600;
+}
+.header-content h2{
+    font-size: 2.2rem;
+    font-style: italic;
+}
+.btn-head{
+    color: #fff;
+    background-color: rgb(204,204,0);
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 10px 40px;
+    min-height: 44px; /* Better touch target for mobile */
+    border: none;
+    cursor: pointer;
+}
+.btn-head:hover{
+    color: #fff;
+    background-color: rgba(204,204,0,0.7);
+}
+.navbar-brand{
+    font-size: 29px;    
+    font-family: 'Lobster Two', cursive;
+    color: #ffc107 !important;
+    font-weight: 600;
+}
+nav ul li a{
+    margin: 0px 10px;
+    color: #fff !important;
+    font-size: 17px;
+}
+nav ul li a:hover{
+    color: #ffc107 !important;
+}
+nav{background-color: rgba(0, 0 , 0, 0.55) !important;}
+.developer{
+    width: 90%;
+    top: 75%;
+    right: 5%;
+    transition: 1s all;
+}
+.about{
+    width: 90%;
+    right: 5%;
+    height: 90%;
+    top: -90%;
+    background-color: rgba(0, 33, 71, 0.7);
+    transition: 1s all;
+}
+.about a{
+    color: #ffc107;
+    text-decoration: none;
+}.about a:hover{
+    text-decoration: underline;
+}
+.experience .main-content h3{
+    color: #000;
+    font-size: 1.4rem;
+}
+.experience .main-content h4{
+    color: #ffc107;
+    font-size: 1rem;
+}
+.main:hover .developer
+{
+    top: 150%;
+}
+.main:hover .about
+{
+    top: 5%;
+}
+.main img{transition: 1s all;}
+.main:hover img
+{
+    transform: scale(1.1,1.1);
+}
+.gategory{
+    background-color: #f0f0f0;
+}
+.gategory .col-md-3
+{
+    margin: 5px 0px 15px 0px;
+}
+.layer1
+{
+    background-color: rgb(0,0,255);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer1{
+    background-color: rgba(0,0,255,0.5);
+    cursor: pointer;
+}
+.layer2
+{
+    background-color: rgb(0,191,255);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer2{
+    background-color: 	rgba(0,191,255,0.5);
+    cursor: pointer;
+}
+.layer3
+{
+    background-color: 	rgb(0,128,0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer3{
+    background-color: 		rgba(0,128,0,0.5);
+    cursor: pointer;
+}
+.layer4
+{
+    background-color: rgb(60,179,113);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer4{
+    background-color: rgba(60,179,113,0.5);
+    cursor: pointer;
+}
+.layer5
+{
+    background-color:rgb(255,255,0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer5{
+    background-color:rgba(255,255,0,0.5);
+    cursor: pointer;
+}
+.layer6
+{
+    background-color:rgb(255,20,147);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer6{
+    background-color:rgba(255,20,147,0.5);
+    cursor: pointer;
+}
+.layer7
+{
+    background-color: rgb(255,128,0);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer7{
+    background-color:rgba(255,128,0,0.5);
+    cursor: pointer;
+}
+.layer8
+{
+    background-color:rgb(128,0,128);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0%;
+    color: #fff;
+    transition: 1s all;
+}
+.inner:hover .layer8{
+    background-color:rgba(128,0,128,0.5);
+    cursor: pointer;
+}
+.pluslayer{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255,255,0);
+    color: #fff;
+    top: 0%;
+    opacity: 0;
+    transition: 1s opacity;
+}.inner-cont{
+    box-shadow: 3px 3px 3px gray;
+}
+.inner-cont:hover .pluslayer{
+    opacity: 0.9;
+}
+.pluslayer i{
+    font-size: 4.5rem;
+}
+.plis .col-md-4{
+    margin: 5px 0px 25px 0px;
+}
+.body-contact input{
+    box-shadow: 2px 2px 2px gray;
+}
+.body-contact textarea{
+    box-shadow: 4px 4px 4px gray;
+}
+.contact{
+    background-image: url('../img/map.png');
+    background-color: #212529;
+    background-size: 100% 100%;
+}
+.btn-head1{
+    color: #fff;
+    background-color: rgb(204,204,0);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    min-height: 44px; /* Better touch target for mobile */
+}
+.btn-head1:hover{
+    color: #fff;
+    background-color: rgba(204,204,0,0.7);
+}
+/* ========== Mobile Styles (up to 576px) ========== */
+@media (max-width: 575.98px) {
+    /* Header Section */
+    header {
+        height: 100vh;
+        min-height: 500px;
+        padding: 20px;
+    }
+    .header-content h1 {
+        font-size: 2rem;
+        margin: 15px 0px;
+    }
+    .header-content h2 {
+        font-size: 1.4rem;
+    }
+    .btn-head {
+        font-size: 1.2rem;
+        padding: 8px 25px;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 22px;
+    }
+    nav ul li a {
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+    .navbar-collapse {
+        text-align: center;
+        margin-top: 15px;
+    }
+    
+    /* Experience Section */
+    .experience .main-content {
+        margin-bottom: 20px;
+    }
+    .experience .main-content .col-md-4 {
+        margin-bottom: 30px;
+    }
+    .developer {
+        width: 95%;
+        right: 2.5%;
+    }
+    .about {
+        width: 95%;
+        right: 2.5%;
+        padding: 15px;
+    }
+    .about .inner h3 {
+        font-size: 1.2rem;
+    }
+    .about .inner p {
+        font-size: 0.9rem;
+    }
+    .experience .main-content h3 {
+        font-size: 1.1rem;
+    }
+    .experience .main-content h4 {
+        font-size: 0.85rem;
+    }
+    
+    /* Category Section */
+    .gategory .col-md-3 {
+        margin-bottom: 20px;
+    }
+    .layer1, .layer2, .layer3, .layer4, 
+    .layer5, .layer6, .layer7, .layer8 {
+        padding: 10px;
+    }
+    .layer1 h3, .layer2 h3, .layer3 h3, .layer4 h3,
+    .layer5 h3, .layer6 h3, .layer7 h3, .layer8 h3 {
+        font-size: 1rem;
+    }
+    
+    /* Portfolio Section */
+    .plis .col-md-4 {
+        margin-bottom: 25px;
+    }
+    .pluslayer i {
+        font-size: 3rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 30px 0px;
+    }
+    .maiin-contact {
+        padding: 20px 15px;
+    }
+    .maiin-contact h2 {
+        font-size: 1.8rem;
+    }
+    .body-contact {
+        padding: 20px 15px;
+    }
+    .body-contact .col-md-6 {
+        margin-bottom: 0px;
+    }
+    .body-contact input,
+    .body-contact textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+        margin-bottom: 15px !important;
+    }
+    .btn-head1 {
+        font-size: 1rem;
+        padding: 12px 20px;
+        width: 100%;
+        margin-top: 15px;
+        min-height: 44px; /* Better touch target */
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    /* General */
+    .upper-content h2 {
+        font-size: 1.8rem;
+    }
+    .upper-content p {
+        font-size: 0.95rem;
+    }
+    
+    /* Container padding */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Section padding */
+    .experience, .gategory, .plis {
+        padding: 30px 0px !important;
+    }
+    
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ========== Tablet Styles (576px to 991.98px) ========== */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    /* Header Section */
+    header {
+        height: 100vh;
+        min-height: 600px;
+        padding: 30px;
+    }
+    .header-content h1 {
+        font-size: 3rem;
+        margin: 20px 0px;
+    }
+    .header-content h2 {
+        font-size: 1.8rem;
+    }
+    .btn-head {
+        font-size: 1.4rem;
+        padding: 10px 35px;
+    }
+    
+    /* Navigation */
+    .navbar-brand {
+        font-size: 26px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    /* Experience Section */
+    .experience .main-content .col-md-4 {
+        margin-bottom: 30px;
+    }
+    .developer {
+        width: 92%;
+        right: 4%;
+    }
+    .about {
+        width: 92%;
+        right: 4%;
+        padding: 20px;
+    }
+    .experience .main-content h3 {
+        font-size: 1.25rem;
+    }
+    .experience .main-content h4 {
+        font-size: 0.95rem;
+    }
+    
+    /* Category Section */
+    .gategory .col-md-3 {
+        margin-bottom: 20px;
+    }
+    .layer1, .layer2, .layer3, .layer4, 
+    .layer5, .layer6, .layer7, .layer8 {
+        padding: 15px;
+    }
+    .layer1 h3, .layer2 h3, .layer3 h3, .layer4 h3,
+    .layer5 h3, .layer6 h3, .layer7 h3, .layer8 h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Portfolio Section */
+    .plis .col-md-4 {
+        margin-bottom: 25px;
+    }
+    .pluslayer i {
+        font-size: 3.5rem;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 40px 0px;
+    }
+    .maiin-contact {
+        padding: 25px 15px;
+    }
+    .maiin-contact h2 {
+        font-size: 2.2rem;
+    }
+    .body-contact {
+        padding: 25px 15px;
+    }
+    .body-contact input,
+    .body-contact textarea {
+        font-size: 16px;
+        margin-bottom: 15px !important;
+    }
+    .btn-head1 {
+        font-size: 1.1rem;
+        padding: 12px 25px;
+        min-height: 44px; /* Better touch target */
+    }
+    
+    /* General */
+    .upper-content h2 {
+        font-size: 2.2rem;
+    }
+    
+    /* Container padding */
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    /* Section padding */
+    .experience, .gategory, .plis {
+        padding: 40px 0px !important;
+    }
+}
+
+/* ========== Small Mobile (up to 400px) ========== */
+@media (max-width: 400px) {
+    .header-content h1 {
+        font-size: 1.6rem;
+    }
+    .header-content h2 {
+        font-size: 1.2rem;
+    }
+    .btn-head {
+        font-size: 1rem;
+        padding: 6px 20px;
+    }
+    .navbar-brand {
+        font-size: 20px;
+    }
+    .upper-content h2 {
+        font-size: 1.6rem;
+    }
+    .layer1 h3, .layer2 h3, .layer3 h3, .layer4 h3,
+    .layer5 h3, .layer6 h3, .layer7 h3, .layer8 h3 {
+        font-size: 0.9rem;
+    }
+}
