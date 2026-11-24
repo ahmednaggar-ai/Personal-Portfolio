@@ -204,7 +204,7 @@ blockquote:after{
 }
 
 code, pre{
-	border-left: 3px solid #ff4b36;
+	border-left: 3px solid var(--accent-2);
 	font-style: italic;
 	margin: 10px 0px 23px 0px;
 	padding: 12px 12px 12px 5%;
@@ -215,7 +215,7 @@ code, pre{
 	font-size: 20px;
 }
 blockquote{
-	border-left: 3px solid #ff4b36;
+	border-left: 3px solid var(--accent-2);
 	font-style: italic;
 	margin: 10px 0px 23px 0px;
 	padding: 12px 12px 12px 5%;
@@ -430,7 +430,7 @@ p{margin-bottom: 20px;letter-spacing: 0px;}
 }
 .arlo_fn_sidebar .widget_nav_menu ul li.opened > a,
 .widget_nav_menu ul li a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .widget_nav_menu ul ul{
 	display: none;
@@ -1268,7 +1268,7 @@ blockquote.right{margin-left:40px; text-align:left; margin-right:0; width:50%; f
 }
 .arlo_fn_footer .widget_oih_opt_in_widget button{
 	height: 44px !important;
-	background-color: #ff4b36 !important;
+	background-color: var(--accent-2) !important;
 	border-radius: 0px !important;
 	padding: 0px 25px !important;
 	font-size: 14px !important;
@@ -1405,7 +1405,7 @@ a.arlo_fn_totop.arlo_fn_fixed_totop.scrolled{
 	transform: translateY(0);
 }
 a.arlo_fn_totop.arlo_fn_fixed_totop .top{
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 	width: 38px;
 	height: 38px;
 	border: none;
@@ -1549,7 +1549,7 @@ img.retina_logo{
     transition: all .3s ease;
 }
 .arlo_fn_header .menu_nav ul.vert_nav li > a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_header .menu_nav ul.vert_nav li > a:before{
 	position: absolute;
@@ -1619,7 +1619,7 @@ img.retina_logo{
 .arlo_fn_header .header_closer{
 	width: 38px;
     height: 38px;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
     position: absolute;
     right: 0px;
     bottom: 20%;
@@ -1667,7 +1667,7 @@ img.retina_logo{
 }
 .arlo_fn_wrapper_all[data-nav-skin="dark"] .arlo_fn_header .menu_nav ul.vert_nav li.hovered > a,
 .arlo_fn_wrapper_all[data-nav-skin="dark"] .arlo_fn_header .menu_nav ul.vert_nav li > a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_wrapper_all[data-nav-skin="dark"] .arlo_fn_tagline .tline_search input[type=text]{
 	border-bottom-color: rgba(255,255,255,.1);
@@ -1679,7 +1679,7 @@ img.retina_logo{
 	color: #fff;
 }
 .arlo_fn_wrapper_all[data-nav-skin="dark"] .arlo_fn_tagline .social_list ul li a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_wrapper_all[data-nav-skin="dark"] #arlo_fn_fixedsub ul{
 	background-color: #000;
@@ -1689,7 +1689,7 @@ img.retina_logo{
 }
 .arlo_fn_wrapper_all[data-nav-skin="dark"] #arlo_fn_fixedsub ul li:hover > a,
 .arlo_fn_wrapper_all[data-nav-skin="dark"] #arlo_fn_fixedsub ul a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 
 
@@ -1979,7 +1979,7 @@ img.retina_logo{
 	color: #000;
 	transition: all .3s ease;
 }
-.arlo_fn_tagline .social_list ul li a:hover{color: #ff4b36;}
+.arlo_fn_tagline .social_list ul li a:hover{color: var(--accent-2);}
 
 
 
@@ -2114,11 +2114,11 @@ img.retina_logo{
 
 .arlo_fn_header .menu_nav ul.vert_nav li.hovered > a,
 .arlo_fn_header .menu_nav ul.vert_nav li > a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 #arlo_fn_fixedsub ul li:hover > a,
 #arlo_fn_fixedsub ul a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 
 
@@ -2232,7 +2232,7 @@ img.retina_logo{
     content: "";
     width: 60px;
     height: 3px;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
     left: 0px;
     bottom: -10px;
 }
@@ -2698,7 +2698,7 @@ img.retina_logo{
 	text-decoration: none;
 }
 .arlo_fn_comment span.author a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_comment span.time{
     line-height: 1.2;
@@ -2891,7 +2891,7 @@ img.retina_logo{
     display: inline-block;
     margin-left: 1px;
 	margin-top: -4px;
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_comment .input-holder textarea{
 	width: 100%;
@@ -3078,7 +3078,7 @@ ul.arlo_fn_archive_list h3 a{
 }
 ul.arlo_fn_postlist h3 a:hover,
 ul.arlo_fn_archive_list h3 a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 ul.arlo_fn_postlist p,
 ul.arlo_fn_archive_list p{
@@ -3240,14 +3240,14 @@ ul.arlo_fn_archive_list.blog_archive p.t_header .t_category{
 ul.arlo_fn_postlist p.t_header a,
 ul.arlo_fn_archive_list.blog_archive p.t_header a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     position: relative;
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
 }
 ul.arlo_fn_postlist p.t_header a:hover,
 ul.arlo_fn_archive_list.blog_archive p.t_header a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 ul.arlo_fn_postlist .read_holder,
 ul.arlo_fn_archive_list.blog_archive p.read_holder{
@@ -3266,7 +3266,7 @@ ul.arlo_fn_archive_list.blog_archive .title_holder{
 ul.arlo_fn_postlist .read_holder a,
 ul.arlo_fn_archive_list.blog_archive p.read_holder a{
 	display: inline-block;
-    color: #ff4b36;
+    color: var(--accent-2);
     text-decoration: none;
     font-size: 16px;
     line-height: 24px;
@@ -3274,7 +3274,7 @@ ul.arlo_fn_archive_list.blog_archive p.read_holder a{
 }
 ul.arlo_fn_postlist .read_holder a:hover,
 ul.arlo_fn_archive_list.blog_archive p.read_holder a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 ul.arlo_fn_postlist .title_holder:before,
 ul.arlo_fn_postlist .title_holder:after,
@@ -3534,13 +3534,13 @@ ul.arlo_fn_archive_list.blog_archive .title_holder:after{
 }
 .blog_single_title p.t_header a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     position: relative;
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
 }
 .blog_single_title p.t_header a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 /* !!!! tags */
 .arlo_fn_tags{
@@ -4566,7 +4566,7 @@ p.comment-form-cookies-consent{
 	text-align: center;
 }
 .arlo_fn_social_list ul li a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .arlo_fn_social_list[data-social-bg="border"] ul li a{
 	border: 1px solid #333;
@@ -5663,7 +5663,7 @@ p.comment-form-cookies-consent{
 	text-decoration: none;
 }
 .arlo_fn_portfolio_grid .item .title_holder h3 a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 @media(max-width: 768px){
 	.arlo_fn_portfolio_grid .inner ul li{width: 100%;}
@@ -5756,7 +5756,7 @@ p.comment-form-cookies-consent{
 	text-decoration: none;
 }
 .arlo_fn_portfolio_masonry .item .title_holder h3 a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 @media(max-width: 768px){
 	.arlo_fn_portfolio_masonry .inner ul li{width: 100%;}

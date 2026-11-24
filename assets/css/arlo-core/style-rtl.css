@@ -148,7 +148,7 @@ body.rtl .fn_cs_counter_with_content .leftpart li{float: right;}
 body.rtl .fn_cs_counter_with_descr .top_part p{
 	padding-left: 0px;
 	padding-right: 35px;
-	border-right: 4px solid #ff4b36;
+	border-right: 4px solid var(--accent-2);
 	border-left: none;
 }
 body.rtl .fn_cs_counter_with_descr .top_part h3{
@@ -182,7 +182,7 @@ body.rtl .fn_cs_counter_with_rating .rightpart:after{
 body.rtl .fn_cs_counter_with_rating .rightpart:before{
 	right: auto;
 	left: 0px;
-	border-left: 30px solid #ff4b36;
+	border-left: 30px solid var(--accent-2);
 	border-right: none;
 }
 body.rtl .fn_cs_counter_with_rating .rightpart{padding: 87px 100px 80px 190px;}

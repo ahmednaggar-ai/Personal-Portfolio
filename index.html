@@ -8,6 +8,18 @@
 <head>
 
     <meta charset="UTF-8">
+    <!-- Apply saved theme before first paint (see assets/js/theme-switcher.js) -->
+    <script>
+        (function () {
+            try {
+                var t = JSON.parse(localStorage.getItem("portfolio-theme")) || {};
+                document.documentElement.setAttribute("data-theme", t.color || "orange");
+                var m = t.mode === "light" || t.mode === "dark" ? t.mode
+                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.setAttribute("data-mode", m);
+            } catch (e) {}
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <title>Ahmed Hossam - Frontend Developer | Angular Specialist | TypeScript & UI Engineer Portfolio</title>
@@ -289,7 +301,7 @@
         }
         
         .arlo_fn_header .header_closer {
-            background-color: #ff4b36;
+            background-color: var(--accent-2);
         }
         
         .wpcf7-form input[type=submit],
@@ -336,16 +348,16 @@
         .arlo_fn_cartbox .fn_cartbox_empty a:hover,
         .arlo_fn_triggermenu .trigger_closer:hover .icon,
         .woocommerce div.product form.cart .button:hover {
-            background-color: #ff4b36;
+            background-color: var(--accent-2);
         }
         
         ul.arlo_fn_service_list_default .read_more a:hover:after {
-            border-right-color: #ff4b36;
+            border-right-color: var(--accent-2);
         }
         
         @media(max-width: 768px) {
             .arlo_fn_comment div.comment-text .comment-reply-link:hover {
-                background-color: #ff4b36;
+                background-color: var(--accent-2);
             }
         }
         
@@ -428,7 +440,7 @@
         table a:hover,
         code a:hover,
         pre a:hover {
-            color: #ff4b36;
+            color: var(--accent-2);
         }
         
         .arlo_fn_widget_estimate .helper1,
@@ -436,18 +448,18 @@
         blockquote,
         ul.arlo_fn_service_list .item:hover span.roof:after,
         ul.arlo_fn_service_list .item:hover .title_holder .read_more:after {
-            border-left-color: #ff4b36;
+            border-left-color: var(--accent-2);
         }
         
         .arlo_fn_widget_estimate .helper2,
         .arlo_fn_widget_estimate .helper6,
         ul.arlo_fn_service_list .item:hover span.roof:before {
-            border-right-color: #ff4b36;
+            border-right-color: var(--accent-2);
         }
         
         .index_page.arlo_fn_pagetitle h3:before,
         .arlo_fn_footer .widget_oih_opt_in_widget button {
-            background-color: #ff4b36 !important;
+            background-color: var(--accent-2) !important;
         }
         
         ul.arlo_fn_postlist .read_holder a:hover,
@@ -456,7 +468,7 @@
         ul.arlo_fn_archive_list.blog_archive p.t_header a:hover,
         .arlo_fn_cartbox .fn_cartbox_item_title>span a:hover,
         ul.arlo_fn_archive_list.blog_archive p.read_holder a:hover {
-            border-bottom-color: #ff4b36;
+            border-bottom-color: var(--accent-2);
         }
         
         .comment-reply-title,
@@ -632,12 +644,12 @@
         
         .arlo_fn_header_sticky ul.nav__hor>li.opened>a,
         .arlo_fn_header_sticky ul.nav__hor>li>a:hover {
-            color: #ff4b36;
+            color: var(--accent-2);
         }
         
         .arlo_fn_header_sticky ul.nav__hor>li.menu-item-has-children.opened>a:hover,
         .arlo_fn_header_sticky ul.nav__hor>li.menu-item-has-children>a:hover:after {
-            border-top-color: #ff4b36;
+            border-top-color: var(--accent-2);
         }
         
         .arlo_fn_triggermenu {
@@ -695,7 +707,7 @@
         }
         
         a.arlo_fn_totop.arlo_fn_fixed_totop .top {
-            background-color: #ff4b36;
+            background-color: var(--accent-2);
         }
         
         a.arlo_fn_totop.arlo_fn_fixed_totop .top:after {
@@ -740,6 +752,7 @@
         }
     }
     </script>
+    <link rel="stylesheet" id="theme-css" href="assets/css/theme.css" type="text/css" media="all" />
 </head>
 
 
@@ -790,7 +803,7 @@
                                     }
                                     
                                     .arlo_fn_social_list[data-social-type="abbr"] ul li a:hover {
-                                        color: #ff4b36 !important;
+                                        color: var(--accent-2) !important;
                                     }
                                     
                                     .arlo_fn_social_list[data-social-type="icon"] ul li a {
@@ -799,8 +812,8 @@
                                     }
                                     
                                     .arlo_fn_social_list[data-social-type="icon"] ul li a:hover {
-                                        border-color: #ff4b36 !important;
-                                        color: #ff4b36 !important;
+                                        border-color: var(--accent-2) !important;
+                                        color: var(--accent-2) !important;
                                     }
                                     
                                     .arlo_fn_social_list[data-social-type="icon"][data-social-bg="bg"] ul li a {
@@ -1533,10 +1546,10 @@ The Ultimate Git Course</span></div>
                                                         <div class="elementor-column-wrap elementor-element-populated">
                                                             <div class="elementor-widget-wrap">
                                                                 <div class="experience-timeline-container" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
-                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid #D17500; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid var(--accent); position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
                                                                         <h3 style="color: #000; margin-bottom: 10px; font-size: 24px; font-weight: 400;">Engaz AI</h3>
-                                                                        <p style="color: #D17500; margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · Hybrid</p>
-                                                                        <p style="color: #D17500; margin-bottom: 15px; font-size: 14px;">Nov 2024 – Present</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · Hybrid</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 15px; font-size: 14px;">Nov 2024 – Present</p>
                                                                         <ul style="color: #999; line-height: 1.8; font-size: 14px; margin: 0 0 12px; padding-left: 18px; list-style: disc;">
                                                                             <li>Deliver scalable frontend solutions for two major products: an HR platform and NAVI, a real estate platform.</li>
                                                                             <li>Refactored and restructured the entire project architecture, improving performance, maintainability, and scalability.</li>
@@ -1546,10 +1559,10 @@ The Ultimate Git Course</span></div>
                                                                         <p style="color: #666; font-size: 13px; margin: 0;"><strong>Tech Stack:</strong> Angular, TypeScript, RxJS, REST APIs, Git</p>
                                                                     </div>
 
-                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid #D17500; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid var(--accent); position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
                                                                         <h3 style="color: #000; margin-bottom: 10px; font-size: 24px; font-weight: 400;">World Trust Soft</h3>
-                                                                        <p style="color: #D17500; margin-bottom: 8px; font-weight: 500; font-size: 16px;">Full-Stack Developer (Frontend Focus) · Remote, Part-Time</p>
-                                                                        <p style="color: #D17500; margin-bottom: 15px; font-size: 14px;">Feb 2026 – Oct 2026</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 8px; font-weight: 500; font-size: 16px;">Full-Stack Developer (Frontend Focus) · Remote, Part-Time</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 15px; font-size: 14px;">Feb 2026 – Oct 2026</p>
                                                                         <ul style="color: #999; line-height: 1.8; font-size: 14px; margin: 0 0 12px; padding-left: 18px; list-style: disc;">
                                                                             <li>Developed and maintained the frontend of a large-scale ERP platform using Angular and TypeScript.</li>
                                                                             <li>Built responsive, high-performance user interfaces in collaboration with UI/UX designers and product teams.</li>
@@ -1560,10 +1573,10 @@ The Ultimate Git Course</span></div>
                                                                         <p style="color: #666; font-size: 13px; margin: 0;"><strong>Tech Stack:</strong> Angular, TypeScript, REST APIs, Node.js, PostgreSQL, JWT</p>
                                                                     </div>
 
-                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid #D17500; position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid var(--accent); position: relative; border-bottom: 1px solid rgba(255,255,255,0.1);">
                                                                         <h3 style="color: #000; margin-bottom: 10px; font-size: 24px; font-weight: 400;">Sortech A Technologies</h3>
-                                                                        <p style="color: #D17500; margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · On-site</p>
-                                                                        <p style="color: #D17500; margin-bottom: 15px; font-size: 14px;">Oct 2023 – Nov 2024</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · On-site</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 15px; font-size: 14px;">Oct 2023 – Nov 2024</p>
                                                                         <ul style="color: #999; line-height: 1.8; font-size: 14px; margin: 0 0 12px; padding-left: 18px; list-style: disc;">
                                                                             <li>Built and maintained a CRM application in Angular, converting complex designs into interactive, responsive components.</li>
                                                                             <li>Partnered with backend developers to integrate REST APIs efficiently.</li>
@@ -1572,10 +1585,10 @@ The Ultimate Git Course</span></div>
                                                                         <p style="color: #666; font-size: 13px; margin: 0;"><strong>Tech Stack:</strong> Angular, TypeScript, PrimeNG, REST APIs, Git</p>
                                                                     </div>
 
-                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid #D17500; position: relative;">
+                                                                    <div class="experience-item" style="margin-bottom: 40px; padding: 30px; background: transparent; border-radius: 8px; border-left: 4px solid var(--accent); position: relative;">
                                                                         <h3 style="color: #000; margin-bottom: 10px; font-size: 24px; font-weight: 400;">Gorgov Digital Marketing Agency</h3>
-                                                                        <p style="color: #D17500; margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · Hybrid</p>
-                                                                        <p style="color: #D17500; margin-bottom: 15px; font-size: 14px;">Oct 2021 – Sep 2023</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 8px; font-weight: 500; font-size: 16px;">Frontend Developer · Hybrid</p>
+                                                                        <p style="color: var(--accent); margin-bottom: 15px; font-size: 14px;">Oct 2021 – Sep 2023</p>
                                                                         <ul style="color: #999; line-height: 1.8; font-size: 14px; margin: 0 0 12px; padding-left: 18px; list-style: disc;">
                                                                             <li>Developed and maintained user-focused web applications using JavaScript (ES6+), Angular, React, and jQuery.</li>
                                                                             <li>Delivered custom solutions for high-traffic and government projects, including haj.gov.sa.</li>
@@ -2033,6 +2046,7 @@ The Ultimate Git Course</span></div>
         });
     });
 </script>
+<script src="assets/js/theme-switcher.js"></script>
 </body>
 <script>
     'undefined' === typeof _trfq || (window._trfq = []);
@@ -2148,16 +2162,16 @@ The Ultimate Git Course</span></div>
         height: auto;
         max-height: 90vh;
         object-fit: contain;
-        border: 3px solid #D17500;
+        border: 3px solid var(--accent);
         border-radius: 8px;
-        box-shadow: 0 4px 20px rgba(209, 117, 0, 0.5);
+        box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.5);
     }
 
     .portfolio-modal-close {
         position: absolute;
         top: -40px;
         right: 0;
-        color: #D17500;
+        color: var(--accent);
         font-size: 40px;
         font-weight: bold;
         cursor: pointer;
@@ -2170,11 +2184,11 @@ The Ultimate Git Course</span></div>
         justify-content: center;
         line-height: 1;
         transition: all 0.3s ease;
-        border: 2px solid #D17500;
+        border: 2px solid var(--accent);
     }
 
     .portfolio-modal-close:hover {
-        background: #D17500;
+        background: var(--accent);
         color: #000;
         transform: rotate(90deg);
     }

@@ -329,7 +329,7 @@ body.open_search_popup .arlo_fn_searchpopup{
 }
 .arlo_fn_searchpopup .search_closer.closed .s_btn,
 .arlo_fn_searchpopup .search_closer:hover .s_btn{
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 }
 .arlo_fn_searchpopup .search_closer .s_text{
 	position: relative;
@@ -1221,7 +1221,7 @@ body.open_search_popup .arlo_fn_two_lines[data-topbar-menu-pos="topbar_top"] .se
     padding-right: 27px;
 }
 .arlo_fn_triggermenu .trigger_closer:hover .icon{
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 }
 .arlo_fn_triggermenu .trigger_closer .icon{
 	width: 20px;

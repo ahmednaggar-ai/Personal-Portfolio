@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Apply saved theme before first paint (see assets/js/theme-switcher.js) -->
+    <script>
+        (function () {
+            try {
+                var t = JSON.parse(localStorage.getItem("portfolio-theme")) || {};
+                document.documentElement.setAttribute("data-theme", t.color || "orange");
+                var m = t.mode === "light" || t.mode === "dark" ? t.mode
+                    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                document.documentElement.setAttribute("data-mode", m);
+            } catch (e) {}
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Portfolio Projects - Ahmed Hossam | Frontend Developer & Angular Specialist</title>
     <meta name="description" content="View all portfolio projects by Ahmed Hossam - Frontend Developer and Angular Specialist. Angular, TypeScript, React, ERP, CRM, HR, and real estate projects. Based in Cairo, Egypt." />
@@ -108,15 +120,15 @@
             height: auto;
             max-height: 90vh;
             object-fit: contain;
-            border: 3px solid #D17500;
+            border: 3px solid var(--accent);
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(209, 117, 0, 0.5);
+            box-shadow: 0 4px 20px rgba(var(--accent-rgb), 0.5);
         }
         .portfolio-modal-close {
             position: absolute;
             top: -40px;
             right: 0;
-            color: #D17500;
+            color: var(--accent);
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
@@ -129,10 +141,10 @@
             justify-content: center;
             line-height: 1;
             transition: all 0.3s ease;
-            border: 2px solid #D17500;
+            border: 2px solid var(--accent);
         }
         .portfolio-modal-close:hover {
-            background: #D17500;
+            background: var(--accent);
             color: #000;
             transform: rotate(90deg);
         }
@@ -172,6 +184,7 @@
         }
     }
     </script>
+    <link rel="stylesheet" id="theme-css" href="assets/css/theme.css" type="text/css" media="all" />
 </head>
 <body class="home page-template page-template-page-fullwidth page-template-page-fullwidth-php page page-id-72 arlo_fn_light__bg elementor-default elementor-kit-686 elementor-page elementor-page-72">
     <div class="arlo_fn_wrapper_all disable menu_opened" data-nav-skin="nonelight" data-mobile-autocollapse="enable" data-nav-type="one_line" data-submenu-skin="dark">
@@ -521,6 +534,7 @@
             });
         })();
     </script>
+<script src="assets/js/theme-switcher.js"></script>
 </body>
 </html>
 

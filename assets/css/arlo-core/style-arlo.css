@@ -1029,7 +1029,7 @@
     position: relative;
 }
 .fn_cs_main_title .title_holder h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_main_title .title_holder h3:after{
 	content: '';
@@ -1038,7 +1038,7 @@
     left: 0px;
     width: 60px;
     height: 3px;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
 }
 /*------------------------------------------------------------------*/
 /*	07) SERVICES
@@ -3624,7 +3624,7 @@
 	position: absolute;
 	width: 100px;
 	height: 2px;
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 	top: 100%;
 	left: 2px;
 	margin-top: 14px;
@@ -6116,7 +6116,7 @@ body.admin-bar .fn_cs_kenburnsy{
     bottom: -2px;
     z-index: 20;
 	left: 0;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
     padding: 0px 10px;
 	transform: translateY(100%);
 	transition: all .3s ease;
@@ -6389,7 +6389,7 @@ body.admin-bar .fn_cs_kenburnsy{
 	transition: all .3s ease;
 }
 .fn_cs__ul__filter_masonry .show_all a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs__ul__filter_masonry .posts_filter{
 	margin: 0;
@@ -6459,7 +6459,7 @@ body.admin-bar .fn_cs_kenburnsy{
 	transition: all .3s ease;
 }
 .fn_cs__ul__filter_masonry .posts_filter a.current{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs__ul__filter_masonry ul.posts_list .title_holder p{
 	margin: 0;
@@ -6488,7 +6488,7 @@ body.admin-bar .fn_cs_kenburnsy{
 	font-family: "Montserrat", Sans-serif;
 }
 .fn_cs__ul__filter_masonry ul.posts_list .title_holder h3 a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs__ul__filter_masonry .list_wrapper,
 .fn_cs__ul__filter_masonry .filter_wrapper{
@@ -6768,7 +6768,7 @@ body.admin-bar .fn_cs_psingle_hero_title{
 	transition: all .3s ease;
 }
 .fn_cs_psingle_hero_title .title_holder p a:hover{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_psingle_hero_title .title_holder h3{
 	font-family: 'Rubik';
@@ -9192,7 +9192,7 @@ a.arlo_fn_like:hover{
 	color: #ccc;
 }
 .fn_cs_post_modern_rows .item_inner:hover .title_holder h3 a{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_post_modern_rows .item .img_holder{
 	width: 200px;
@@ -9311,7 +9311,7 @@ a.arlo_fn_like:hover{
 	position: absolute;
 	top: 6px;
 	left: 0;
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_portfolio_details .list_holder .item span{
 	display: inline-block;
@@ -9462,7 +9462,7 @@ a.arlo_fn_like:hover{
 	margin-bottom: 9px;
 }
 .cons_w_wrapper .fn_cs_hero_header_exclusive .title_holder h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .cons_w_wrapper .fn_cs_hero_header_exclusive .title_holder p{
 	margin: 0;
@@ -9608,7 +9608,7 @@ a.arlo_fn_like:hover{
 	font-weight: 600;
 }
 .fn_cs_about_text_slider .right_part .desc_holder h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_about_text_slider .right_part .desc_holder{
 	margin-bottom: 23px;
@@ -9619,7 +9619,7 @@ a.arlo_fn_like:hover{
 	line-height: 2;
 }
 .fn_cs_about_text_slider .right_part .desc_holder p span{
-	color: #ff4b36;
+	color: var(--accent-2);
 	font-style: italic;
 	font-weight: 400;
 }
@@ -9667,7 +9667,7 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_about_text_slider .info_list ul li a{
 	text-decoration: none;
-	color: #ff4b36;
+	color: var(--accent-2);
     position: relative;
 	border-bottom: 1px solid transparent;
 	font-weight: 400;
@@ -9678,7 +9678,7 @@ a.arlo_fn_like:hover{
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
-.fn_cs_about_text_slider .info_list ul li a:hover{border-bottom-color: #ff4b36;}
+.fn_cs_about_text_slider .info_list ul li a:hover{border-bottom-color: var(--accent-2);}
 .fn_cs_about_text_slider .info_list ul li span.icon{
 	position: absolute;
 	left: 0px;
@@ -9696,7 +9696,7 @@ a.arlo_fn_like:hover{
 .fn_cs_about_text_slider .info_list ul li span.icon .arlo_w_fn_svg{
 	width: 17px;
 	height: 17px;
-	color: #ff4b36;
+	color: var(--accent-2);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -9728,7 +9728,7 @@ a.arlo_fn_like:hover{
 .fn_cs_about_text_slider .btn_list ul li a{
 	text-decoration: none;
 	color: #fff;
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 	display: block;
 	padding: 8px 30px;
 	font-family: "Raleway";
@@ -9776,7 +9776,7 @@ a.arlo_fn_like:hover{
 	content: '';
 	width: 20px;
 	height: 1px;
-	background-color: #ff4b36;
+	background-color: var(--accent-2);
 	position: absolute;
 	top: 50%;
 	left: 100%;
@@ -9930,13 +9930,13 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_services_numbered .snumbered_inner ul li .item p.btn_h a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
 	font-size: 16px;
 }
 .fn_cs_services_numbered .snumbered_inner ul li .item p.btn_h a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 
 
@@ -10086,7 +10086,7 @@ a.arlo_fn_like:hover{
 	margin-bottom: 29px;
 }
 .fn_cs_progress_bar_desc .pbd_inner .left_part h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_progress_bar_desc .pbd_inner .left_part p{
 	margin: 0;
@@ -10127,7 +10127,7 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_project_category ul.posts_filter li a:hover,
 .fn_cs_project_category ul.posts_filter li a.current{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_project_category ul.posts_filter li a.current{
 	font-weight: 500;
@@ -10361,7 +10361,7 @@ a.arlo_fn_like:hover{
 	position: absolute;
 	left: 0;
 	top: 0;
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_why_choose_us .wcu_inner .right_part ul li .info_item .icon svg,
 .fn_cs_why_choose_us .wcu_inner .right_part ul li .info_item .icon .arlo_w_fn_svg{
@@ -10370,7 +10370,7 @@ a.arlo_fn_like:hover{
 	position: absolute;
 	left: 0;
 	top: 0;
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 
 
@@ -10552,14 +10552,14 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_triple_blog_shadow .inner .title_holder p.t_info a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     position: relative;
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
 	font-weight: 400;
 }
 .fn_cs_triple_blog_shadow .inner .title_holder p.t_info a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 .fn_cs_triple_blog_shadow .inner .title_holder .b_by{
 	margin-right: 24px;
@@ -10660,7 +10660,7 @@ a.arlo_fn_like:hover{
     clear: both;
     float: left;
     padding: 70px 0px;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
 }
 .fn_cs_partners .owl-carousel img{
 	width: auto;
@@ -10714,7 +10714,7 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_useful_information .info_list ul li .info_item a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     position: relative;
 	font-weight: 400;
     border-bottom: 1px solid transparent;
@@ -10725,7 +10725,7 @@ a.arlo_fn_like:hover{
     transition: all .3s ease;
 }
 .fn_cs_useful_information .info_list ul li .info_item a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 .fn_cs_useful_information .info_list ul li span.icon{
 	position: absolute;
@@ -10744,7 +10744,7 @@ a.arlo_fn_like:hover{
 .fn_cs_useful_information .info_list ul li span.icon .arlo_w_fn_svg{
 	width: 17px;
 	height: 17px;
-	color: #ff4b36;
+	color: var(--accent-2);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -10781,7 +10781,7 @@ a.arlo_fn_like:hover{
 .fn_cs_useful_information .wpcf7-form input[type=submit]{
 	text-decoration: none;
     color: #fff;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
     padding: 8px 45px !important;
     font-family: "Raleway"
 }
@@ -11031,7 +11031,7 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_services_numbered.fn_modern .snumbered_inner ul li .number_holder h3{
 	font-size: 16px;
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_services_numbered.fn_modern .snumbered_inner ul{
 	margin-left: -30px;
@@ -11079,7 +11079,7 @@ a.arlo_fn_like:hover{
     color: #000;
 }
 .fn_cs_counter_with_descr .top_part h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_counter_with_descr .top_part p{
 	margin: 0;
@@ -11087,7 +11087,7 @@ a.arlo_fn_like:hover{
 	margin-left: auto;
 	max-width: 50%;
 	padding-left: 35px;
-	border-left: 4px solid #ff4b36;
+	border-left: 4px solid var(--accent-2);
 }
 .fn_cs_counter_with_descr .bottom_part{
 	width: 100%;
@@ -11137,7 +11137,7 @@ a.arlo_fn_like:hover{
 	content: '';
     width: 20px;
     height: 1px;
-    background-color: #ff4b36;
+    background-color: var(--accent-2);
     position: absolute;
     top: 50%;
     left: 100%;
@@ -11181,7 +11181,7 @@ a.arlo_fn_like:hover{
     font-weight: 600
 }
 .fn_cs_title_with_desc h3 span{
-	color: #ff4b36;
+	color: var(--accent-2);
 }
 .fn_cs_title_with_desc .title_holder p{
 	margin: 0;
@@ -11195,13 +11195,13 @@ a.arlo_fn_like:hover{
 }
 .fn_cs_triple_blog_shadow.fn_second .inner .title_holder p.t_read a{
 	text-decoration: none;
-    color: #ff4b36;
+    color: var(--accent-2);
     border-bottom: 1px solid transparent;
     transition: all .3s ease;
     font-size: 16px;
 }
 .fn_cs_triple_blog_shadow.fn_second .inner .title_holder p.t_read a:hover{
-	border-bottom-color: #ff4b36;
+	border-bottom-color: var(--accent-2);
 }
 .fn_cs_triple_blog_shadow.fn_second .inner .title_holder p.t_info{
 	border-bottom: none;

@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Theme system
+   - Accent colors:  <html data-theme="orange|blue|emerald|purple|rose|teal">
+   - Light / dark:   <html data-mode="light|dark">
+   The saved choice lives in localStorage ("portfolio-theme") and is applied
+   by the inline script in <head> before first paint (see theme-switcher.js).
+   ========================================================================== */
+
+/* ---------- Accent palettes ---------- */
+:root,
+[data-theme="orange"] {
+    --accent: #D17500;
+    --accent-rgb: 209, 117, 0;
+    --accent-2: #ff4b36;          /* template's secondary accent (to-top button, hovers) */
+}
+[data-theme="blue"]    { --accent: #2f6fdf; --accent-rgb: 47, 111, 223;  --accent-2: var(--accent); }
+[data-theme="emerald"] { --accent: #0e9a6c; --accent-rgb: 14, 154, 108;  --accent-2: var(--accent); }
+[data-theme="purple"]  { --accent: #7a4ee6; --accent-rgb: 122, 78, 230;  --accent-2: var(--accent); }
+[data-theme="rose"]    { --accent: #e0244f; --accent-rgb: 224, 36, 79;   --accent-2: var(--accent); }
+[data-theme="teal"]    { --accent: #0f8f8a; --accent-rgb: 15, 143, 138;  --accent-2: var(--accent); }
+
+/* ---------- Light / dark surface tokens ---------- */
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f9f9f9;
+    --surface: #ffffff;
+    --heading: #14141c;
+    --text: #6f6f6f;
+    --border: rgba(0, 0, 0, 0.08);
+}
+[data-mode="dark"] {
+    --bg: #101217;
+    --bg-alt: #151820;
+    --surface: #1b1f28;
+    --heading: #f1f2f4;
+    --text: #a9afba;
+    --border: rgba(255, 255, 255, 0.08);
+    color-scheme: dark;
+}
+
+/* ==========================================================================
+   Theme switcher UI
+   ========================================================================== */
+.theme-switcher {
+    position: fixed;
+    left: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    font-family: inherit;
+}
+.theme-switcher__toggle {
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+.theme-switcher__toggle:hover { transform: scale(1.06); }
+.theme-switcher__toggle:focus-visible,
+.theme-switcher__swatch:focus-visible,
+.theme-switcher__mode button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+.theme-switcher__toggle svg { width: 22px; height: 22px; }
+
+.theme-switcher__panel {
+    position: absolute;
+    left: 0;
+    bottom: 60px;
+    width: 232px;
+    padding: 18px;
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--heading);
+    border: 1px solid var(--border);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+.theme-switcher.is-open .theme-switcher__panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.theme-switcher__label {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+}
+.theme-switcher__mode {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 18px;
+    padding: 4px;
+    border-radius: 8px;
+    background: var(--bg-alt);
+}
+.theme-switcher__mode button {
+    flex: 1;
+    padding: 7px 0;
+    border: 0;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text);
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+.theme-switcher__mode button[aria-pressed="true"] {
+    background: var(--accent);
+    color: #fff;
+}
+.theme-switcher__swatches {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+}
+.theme-switcher__swatch {
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background: var(--swatch);
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px var(--surface);
+}
+.theme-switcher__swatch[aria-checked="true"] { border-color: var(--swatch); }
+
+@media (max-width: 767px) {
+    .theme-switcher { left: 16px; bottom: 16px; }
+    .theme-switcher__toggle { width: 42px; height: 42px; }
+}
+
+/* ==========================================================================
+   Dark mode overrides for the Arlo / Elementor template
+   ========================================================================== */
+[data-mode="dark"] body,
+[data-mode="dark"] .arlo_fn_wrapper_all,
+[data-mode="dark"] .arlo_fn_content,
+[data-mode="dark"] .arlo_fn_pages,
+[data-mode="dark"] .arlo_fn_page_ajax,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) {
+    background-color: var(--bg) !important;
+}
+[data-mode="dark"] #skills,
+[data-mode="dark"] #education {
+    background-color: var(--bg-alt) !important;
+}
+
+/* Headings and body text outside the hero image / call-to-action band */
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h1,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h2,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h3,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h4,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h5,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h6,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) label {
+    color: var(--heading) !important;
+}
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) p,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) li,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) .info_item span {
+    color: var(--text) !important;
+}
+[data-mode="dark"] .elementor-72 .fn_cs_call_to_action .title_holder h3,
+[data-mode="dark"] .fn_cs_call_to_action .title_holder h3 { color: #fff !important; }
+
+/* Keep accent-colored text (spans inside headings, role/date lines) */
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) h3 span,
+[data-mode="dark"] .elementor-section:not(.elementor-element-5dbb627) .info_item span a {
+    color: var(--accent) !important;
+}
+[data-mode="dark"] .experience-item h3 { color: var(--heading) !important; }
+[data-mode="dark"] .experience-item p[style*="--accent"] { color: var(--accent) !important; }
+[data-mode="dark"] .experience-item ul { color: var(--text) !important; }
+[data-mode="dark"] .experience-item p:last-child { color: var(--text) !important; }
+[data-mode="dark"] .experience-item strong { color: var(--heading) !important; }
+
+/* Skills */
+[data-mode="dark"] .elementor-72 .fn_light_mode .fn_cs_progress span.label { color: var(--heading) !important; }
+[data-mode="dark"] .elementor-72 .fn_light_mode .fn_cs_progress .fn_cs_bar_bg { background-color: #2c313c !important; }
+
+/* Portfolio filter + cards */
+[data-mode="dark"] .elementor-72 .fn_cs_project_category ul.posts_filter li a { color: var(--heading) !important; }
+[data-mode="dark"] .elementor-72 .fn_cs_project_category ul.posts_filter li a.current,
+[data-mode="dark"] .elementor-72 .fn_cs_project_category ul.posts_filter li a:hover { color: var(--accent) !important; }
+
+/* Sticky + mobile header */
+[data-mode="dark"] .arlo_fn_header_sticky,
+[data-mode="dark"] .arlo_fn_mobilemenu_wrap,
+[data-mode="dark"] .arlo_fn_mobilemenu_wrap .mobilemenu {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+}
+[data-mode="dark"] .arlo_fn_header_sticky ul li a,
+[data-mode="dark"] .arlo_fn_mobilemenu_wrap ul li a { color: var(--heading) !important; }
+[data-mode="dark"] .arlo_fn_header_sticky ul li a:hover,
+[data-mode="dark"] .arlo_fn_mobilemenu_wrap ul li a:hover { color: var(--accent) !important; }
+
+/* Forms */
+[data-mode="dark"] input[type="text"],
+[data-mode="dark"] input[type="email"],
+[data-mode="dark"] input[type="tel"],
+[data-mode="dark"] textarea,
+[data-mode="dark"] select {
+    background-color: var(--surface) !important;
+    color: var(--heading) !important;
+    border-color: var(--border) !important;
+}
+
+/* Footer */
+[data-mode="dark"] .arlo_fn_footer,
+[data-mode="dark"] .arlo_fn_footer .footer_bottom {
+    background-color: var(--bg-alt) !important;
+    color: var(--text) !important;
+}
+
+/* Smooth color transition when switching */
+.theme-transition,
+.theme-transition *,
+.theme-transition *::before,
+.theme-transition *::after {
+    transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease !important;
+}

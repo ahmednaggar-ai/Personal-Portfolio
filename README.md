@@ -45,6 +45,14 @@ npx serve .
 python -m http.server 8000
 ```
 
+## Themes
+
+Visitors can pick a **light or dark mode** and one of **6 accent colors** (Orange, Blue, Emerald, Purple, Rose, Teal) from the palette button in the bottom-left corner. The choice is saved in `localStorage` (`portfolio-theme`) and applied before the page renders, so there is no flash of the wrong theme.
+
+- Colors and dark-mode rules: [`assets/css/theme.css`](assets/css/theme.css)
+- Picker logic: [`assets/js/theme-switcher.js`](assets/js/theme-switcher.js)
+- **Add a new color:** add a `[data-theme="name"]` block in `theme.css` and an entry in the `COLORS` list in `theme-switcher.js`.
+
 ## Updating content
 
 - **Text** (about, skills, experience, education): edit `index.html`.
