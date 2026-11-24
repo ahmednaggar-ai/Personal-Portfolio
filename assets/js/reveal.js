@@ -37,8 +37,9 @@
         ['.fn_cs_call_to_action .cta_holder', 'up'],
 
         // Education
-        ['.fn_cs_why_choose_us .left_part', 'left'],
-        ['.fn_cs_why_choose_us .right_part .info_list li', 'up'],
+        ['.edu__degree', 'up'],
+        ['.edu__subtitle', 'up'],
+        ['.edu__cert', 'up'],
 
         // Experience
         ['.xp__item', 'up'],
