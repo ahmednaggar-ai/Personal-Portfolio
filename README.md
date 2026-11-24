@@ -66,5 +66,5 @@ Hosted on GitHub Pages at the live URL above.
 ## Contact
 
 - GitHub: [ahmednaggar-ai](https://github.com/ahmednaggar-ai)
-- LinkedIn: [ahmedhossamnaggar](https://www.linkedin.com/in/ahmedhossamnaggar/)
+- LinkedIn: [ahmedalnaggarhossam](https://www.linkedin.com/in/ahmedalnaggarhossam/)
 - Email: ahossamnaggar@gmail.com
