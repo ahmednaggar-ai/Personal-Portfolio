@@ -8,8 +8,12 @@
 (function () {
     'use strict';
 
-    if (!('IntersectionObserver' in window)) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // Without animation support, still mark everything as seen (skill bars show their level)
+    function showAll() {
+        document.querySelectorAll('.sk__card').forEach(function (el) { el.classList.add('is-seen'); });
+    }
+    if (!('IntersectionObserver' in window)) return showAll();
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return showAll();
 
     // [selector, effect]  effect: up (default) | left | right | zoom
     var TARGETS = [
@@ -22,8 +26,8 @@
         ['.fn_cs_about_text_slider .btn_list', 'up'],
 
         // Skills
-        ['.elementor-widget-frel-progress-bar-with-desc .left_part', 'left'],
-        ['.elementor-widget-frel-progress-bar-with-desc .right_part', 'right'],
+        ['.sk__intro', 'up'],
+        ['.sk__card', 'up'],
 
         // Tech logos
         ['.tech-marquee__title', 'up'],
@@ -68,7 +72,7 @@
         visible.forEach(function (entry, i) {
             var el = entry.target;
             el.style.setProperty('--reveal-delay', Math.min(i * STAGGER, MAX_DELAY) + 'ms');
-            el.classList.add('is-revealed');
+            el.classList.add('is-revealed', 'is-seen');   // is-seen stays (used by skill bars)
             observer.unobserve(el);
             // once finished, hand the element back to its own styles (hover transitions etc.)
             window.setTimeout(function () {
