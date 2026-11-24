@@ -191,6 +191,9 @@
 [data-mode="dark"] .experience-item p:last-child { color: var(--text) !important; }
 [data-mode="dark"] .experience-item strong { color: var(--heading) !important; }
 
+/* About photo frame (black on light mode, light on dark mode) */
+[data-mode="dark"] .fn_cs_about_text_slider .left_part .about_image_wrap .border .inner { border-color: #e9ebef !important; }
+
 /* Skills */
 [data-mode="dark"] .elementor-72 .fn_light_mode .fn_cs_progress span.label { color: var(--heading) !important; }
 [data-mode="dark"] .elementor-72 .fn_light_mode .fn_cs_progress .fn_cs_bar_bg { background-color: #2c313c !important; }
@@ -207,6 +210,9 @@
     background-color: var(--surface) !important;
     border-color: var(--border) !important;
 }
+[data-mode="dark"] .arlo_fn_header_sticky { box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35); }
+[data-mode="dark"] .arlo_fn_header_sticky .sticky_list:after { background-color: var(--border) !important; }
+[data-mode="dark"] .arlo_fn_header_sticky ul.nav__hor > li.menu-item-has-children > a:after { border-top-color: var(--heading) !important; }
 [data-mode="dark"] .arlo_fn_header_sticky ul li a,
 [data-mode="dark"] .arlo_fn_mobilemenu_wrap ul li a { color: var(--heading) !important; }
 [data-mode="dark"] .arlo_fn_header_sticky ul li a:hover,
@@ -236,4 +242,119 @@
 .theme-transition *::before,
 .theme-transition *::after {
     transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease !important;
+}
+
+/* ==========================================================================
+   About section: keep the title and each info row on one line (desktop)
+   ========================================================================== */
+@media (min-width: 1041px) {
+    .fn_cs_about_text_slider .right_part .desc_holder h3 {
+        white-space: nowrap;
+        font-size: clamp(20px, 1.7vw, 25px);
+    }
+    .fn_cs_about_text_slider .info_list ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 30px;
+        margin-left: 0;
+    }
+    .fn_cs_about_text_slider .info_list ul li {
+        width: auto;
+        float: none;
+        padding-left: 0;
+    }
+    .fn_cs_about_text_slider .info_list ul li .info_item {
+        white-space: nowrap;
+    }
+    /* Long values (location, study, languages, mail) take a full row */
+    .fn_cs_about_text_slider .info_list ul li.info_wide { grid-column: 1 / -1; }
+}
+
+/* ==========================================================================
+   Tech stack logo slider (two rows scrolling in opposite directions)
+   ========================================================================== */
+.tech-marquee {
+    padding: 90px 0 100px;
+    background-color: var(--bg);
+    overflow: hidden;
+}
+.tech-marquee__title {
+    margin: 0 0 45px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--heading);
+}
+.tech-marquee__title span { color: var(--accent); }
+
+.tech-marquee__row {
+    display: flex;
+    overflow: hidden;
+    /* soft fade on both edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+}
+.tech-marquee__row + .tech-marquee__row { margin-top: 18px; }
+
+/* The track holds the list twice; sliding it by -50% loops seamlessly */
+.tech-marquee__track {
+    display: flex;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    animation: tech-marquee-scroll 40s linear infinite;
+}
+.tech-marquee__row[data-direction="right"] .tech-marquee__track { animation-direction: reverse; }
+.tech-marquee__row:hover .tech-marquee__track { animation-play-state: paused; }
+
+.tech-marquee__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 18px 0 0;            /* margin, not gap, so both halves are equal width */
+    padding: 12px 22px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background-color: var(--surface);
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.tech-marquee__item img {
+    width: 34px;
+    height: 34px;
+}
+.tech-marquee__item span {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--heading);
+}
+.tech-marquee__item:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 22px rgba(var(--accent-rgb), 0.18);
+}
+
+/* Dark logos (GitHub, WordPress) need to be light on dark backgrounds */
+[data-mode="dark"] .tech-marquee__item.is-mono img { filter: invert(1); }
+
+@keyframes tech-marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 767px) {
+    .tech-marquee { padding: 60px 0 70px; }
+    .tech-marquee__title { font-size: 22px; margin-bottom: 30px; }
+    .tech-marquee__item { padding: 10px 16px; margin-right: 12px; }
+    .tech-marquee__item img { width: 26px; height: 26px; }
+    .tech-marquee__item span { font-size: 14px; }
+}
+
+/* Respect users who turn off animations: show a static, wrapped list */
+@media (prefers-reduced-motion: reduce) {
+    .tech-marquee__row { -webkit-mask-image: none; mask-image: none; justify-content: center; }
+    .tech-marquee__track { animation: none; flex-wrap: wrap; justify-content: center; row-gap: 14px; }
+    .tech-marquee__item[aria-hidden="true"] { display: none; }
 }
