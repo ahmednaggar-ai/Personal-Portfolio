@@ -1,6 +1,6 @@
 /*
- * Contact form: the site is static (no server), so sending opens the visitor's
- * email app with the message pre-filled, addressed to the portfolio owner.
+ * Contact form submissions are sent through Web3Forms; the access key is
+ * associated with the portfolio owner's email address.
  */
 (function () {
     'use strict';
@@ -10,6 +10,9 @@
     if (!form) return;
 
     var status = form.querySelector('.contact__status');
+    var submitButton = form.querySelector('[type="submit"]');
+    var submitLabel = submitButton.querySelector('span');
+    var originalLabel = submitLabel.textContent;
     var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     function fieldError(input, message) {
@@ -20,7 +23,7 @@
 
     function validate() {
         var firstBad = null;
-        form.querySelectorAll('input, textarea').forEach(function (input) {
+        form.querySelectorAll('.contact__field input, .contact__field textarea').forEach(function (input) {
             var value = input.value.trim();
             var bad = !value || (input.type === 'email' && !EMAIL_RE.test(value));
             fieldError(input, bad);
@@ -46,18 +49,41 @@
             return;
         }
 
-        var f = form.elements;
-        var name = f.namedItem('name').value.trim();
-        var email = f.namedItem('email').value.trim();
-        var subject = f.namedItem('subject').value.trim();
-        var message = f.namedItem('message').value.trim();
+        status.textContent = '';
+        status.className = 'contact__status';
+        submitButton.disabled = true;
+        submitLabel.textContent = 'Sending...';
 
-        var body = message + '\n\n— ' + name + ' (' + email + ')';
-        window.location.href = 'mailto:' + TO +
-            '?subject=' + encodeURIComponent(subject) +
-            '&body=' + encodeURIComponent(body);
-
-        status.textContent = 'Your email app should open now. If it doesn’t, write to ' + TO + '.';
-        status.className = 'contact__status is-ok';
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: new FormData(form)
+        })
+            .then(function (response) {
+                return response.json().then(function (data) {
+                    if (!response.ok || !data.success) {
+                        throw new Error(data.message || 'Web3Forms rejected the submission.');
+                    }
+                    return data;
+                });
+            })
+            .then(function () {
+                status.textContent = 'Message sent successfully! I’ll get back to you soon.';
+                status.className = 'contact__status is-ok';
+                form.reset();
+                form.querySelectorAll('.contact__field').forEach(function (field) {
+                    field.classList.remove('has-error');
+                    var input = field.querySelector('input, textarea');
+                    if (input) input.setAttribute('aria-invalid', 'false');
+                });
+            })
+            .catch(function (error) {
+                console.error('Contact form submission failed:', error);
+                status.textContent = 'Unable to send your message. Please try again or email ' + TO + ' directly.';
+                status.className = 'contact__status is-error';
+            })
+            .then(function () {
+                submitButton.disabled = false;
+                submitLabel.textContent = originalLabel;
+            });
     });
 })();
